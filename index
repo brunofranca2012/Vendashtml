@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Planos de Internet</title>
+    <style>
+        body {
+          background-color: blue;
+          animation: changeColor 10s ease-in-out infinite;
+        }
+        @keyframes changeColor {
+          0% {
+            background-color: blue;
+          }
+          25% {
+            background-color: red;
+          }
+          50% {
+            background-color: green;
+          }
+          75% {
+            background-color: blue;
+          }
+          100% {
+            background-color: red;
+          }
+        }
+        .plan-box {
+          width: 300px;
+          height: 200px;
+          display: inline-block;
+          margin: 20px;
+          text-align: center;
+          background-color: #eee;
+          border-radius: 10px;
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+          animation: slideIn 1s ease-in-out forwards;
+          transform: translateX(-100%);
+        }
+        @keyframes slideIn {
+          100% {
+            transform: translateX(0%);
+          }
+        }
+        h3 {
+          padding-top: 40px;
+          margin-bottom: 0;
+        }
+        p {
+          margin-top: 0;
+          font-size: 18px;
+          font-weight: bold;
+        }
+        .whatsapp-button {
+          display: block;
+          margin: 40px auto;
+          padding: 10px 20px;
+          background-color: green;
+          color: white;
+          border-radius: 10px;
+          text-decoration: none;
+        }
+        .plan-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="plan-container">
+        <div class="plan-box">
+            <h3>Plano 1 Básico</h3>
+            <p>25,00</p>
+        </div>
+        <div class="plan-box">
+            <h3>Plano 2 Mega</h3>
+            <p>30,00</p>
+        </div>
+        <div class="plan-box">
+            <h3>Plano 3 Hiper</h3>
+            <p>35,00</p>
+        </div>
+    </div>
+    <a href="https://wa.me/5511933048952" class="whatsapp-button">Abrir conversa no WhatsApp</a>
+    <script>
+    const button = document.querySelector('.whatsapp-button');
+    button.addEventListener('click', function() {
+      window.open('https://wa.me/5511933048952');
+
